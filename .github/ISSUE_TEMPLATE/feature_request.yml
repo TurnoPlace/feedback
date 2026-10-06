@@ -1,0 +1,55 @@
+name: Pedir una mejora
+description: Algo que te gustaría que TurnoPlace hiciera, o que hiciera distinto.
+title: "Idea: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Leemos todas. Lo que más nos ayuda no es la solución sino el problema: contanos qué querés hacer y por qué hoy no podés.
+
+        **Esto es público:** cualquiera puede leerlo. No pongas tu celular, tu mail ni datos de otras personas.
+
+  - type: dropdown
+    id: quien
+    attributes:
+      label: ¿Quién sos?
+      options:
+        - Juego y reservo canchas
+        - Tengo un club en TurnoPlace
+        - Tengo un club y estoy pensando en sumarlo
+        - Otro
+    validations:
+      required: true
+
+  - type: textarea
+    id: que
+    attributes:
+      label: ¿Qué te gustaría poder hacer?
+      placeholder: Me gustaría poder reservar el mismo horario todas las semanas sin hacerlo de a uno…
+    validations:
+      required: true
+
+  - type: textarea
+    id: para-que
+    attributes:
+      label: ¿Para qué te serviría?
+      description: Qué problema te resuelve, o cuánto tiempo te ahorra.
+    validations:
+      required: true
+
+  - type: textarea
+    id: hoy
+    attributes:
+      label: ¿Cómo lo resolvés hoy?
+      description: Si hoy lo hacés por WhatsApp, en una planilla o de otra forma, contanos.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: privacidad
+    attributes:
+      label: Antes de mandar
+      options:
+        - label: No puse celulares, mails ni datos de otras personas.
+          required: true

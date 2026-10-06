@@ -1,0 +1,8 @@
+# Sin issue en blanco: los dos formularios piden lo que necesitamos para
+# entender el pedido, y un texto libre casi siempre llega sin dónde pasó ni en
+# qué celular.
+blank_issues_enabled: false
+contact_links:
+  - name: Cómo funciona TurnoPlace
+    url: https://turnoplace.com/ayuda
+    about: Videos cortos de cómo reservar, cancelar y usar el panel del club. Capaz tu duda ya está resuelta ahí.

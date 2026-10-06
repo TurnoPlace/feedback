@@ -1,0 +1,92 @@
+name: Reportar un error
+description: Algo de TurnoPlace no anda como debería.
+title: "Error: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por avisarnos. Con lo que nos cuentes acá lo reproducimos y lo arreglamos.
+
+        **Esto es público:** cualquiera puede leerlo. No pongas tu celular, tu mail, el código de tu turno ni datos de otras personas. Si para explicarlo hace falta algo de eso, escribinos a turnoplace@gmail.com.
+
+  - type: dropdown
+    id: quien
+    attributes:
+      label: ¿Quién sos?
+      options:
+        - Juego y reservo canchas
+        - Tengo un club en TurnoPlace
+        - Otro
+    validations:
+      required: true
+
+  - type: dropdown
+    id: donde
+    attributes:
+      label: ¿Dónde pasó?
+      options:
+        - Buscando cancha (la home o el buscador)
+        - En la página de un club, al reservar
+        - En el comprobante del turno o al cancelarlo
+        - En el pago de la seña con MercadoPago
+        - En el panel del club (la semana o el resumen)
+        - En la configuración del club
+        - Al dar de alta un club
+        - Al entrar o al recuperar la contraseña
+        - En otro lado
+    validations:
+      required: true
+
+  - type: textarea
+    id: que-paso
+    attributes:
+      label: ¿Qué pasó?
+      description: Contalo como se lo contarías a un amigo.
+      placeholder: Toqué el horario de las 21 y me salió un error que decía…
+    validations:
+      required: true
+
+  - type: textarea
+    id: pasos
+    attributes:
+      label: ¿Cómo hacemos para que nos pase a nosotros?
+      description: Los pasos, en orden. Si no te acordás de todos, poné los que sepas.
+      placeholder: |
+        1. Entré a la página del club
+        2. Elegí el sábado
+        3. Toqué el horario de las 21
+    validations:
+      required: false
+
+  - type: textarea
+    id: esperado
+    attributes:
+      label: ¿Qué esperabas que pasara?
+    validations:
+      required: false
+
+  - type: input
+    id: dispositivo
+    attributes:
+      label: ¿En qué lo usaste?
+      description: Celular o compu, y el navegador. Si no sabés, poné solo el celular o la compu.
+      placeholder: iPhone 13 con Safari / Android con Chrome / compu con Chrome
+    validations:
+      required: false
+
+  - type: textarea
+    id: capturas
+    attributes:
+      label: Capturas de pantalla
+      description: Si tenés, arrastralas acá. Tapá antes los teléfonos, mails o códigos que se vean.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: privacidad
+    attributes:
+      label: Antes de mandar
+      options:
+        - label: No puse celulares, mails, códigos de turno ni datos de otras personas.
+          required: true
